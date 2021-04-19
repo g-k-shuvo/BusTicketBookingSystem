@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #242333;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  color: #fff;
+  height: 100vh;
+}
+
+p {
+  margin: 6px 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.banner {
+  width: 400px;
+  margin: 90px;
+}
+
+.banner .heading {
+  text-align: center;
+}
+
+.heading h4 {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.heading h4 i {
+  margin: 0 6px;
+}
+
+.ticket-info {
+  padding: 20px;
+}
+
+svg {
+  max-width: 100%;
+  width: 32px;
+  position: absolute;
+  right: 10px;
+  z-index: 1;
+}
+
+.bus-body {
+  border: 6px solid rgba(107, 107, 107, 0.5);
+  width: 180px;
+  height: 350px;
+  position: relative;
+  z-index: 9999;
+}
+
+.tyre-container-1 {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 111%;
+  left: 50%;
+  top: 16%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.tyre-container-2 {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 111%;
+  left: 50%;
+  bottom: 16%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.tyre {
+  width: 6px;
+  height: 50px;
+  background-color: #4e4e4e;
+  border-radius: 10px;
+}
+
+.bus-front {
+  width: 100%;
+  display: block;
+  height: 12px;
+  background-color: #52525c;
+  position: relative;
+  border-bottom-left-radius: 12px;
+}
+
+.bus-front::after {
+  content: "";
+  width: 80px;
+  height: 7px;
+  background-color: #52525c;
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.front-seat-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 12px auto 0 auto;
+}
+
+.helper-seat-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.helper-seat-1,
+.helper-seat-2,
+.driver-seat,
+.passenger-seat {
+  width: 28px;
+  height: 24px;
+  margin: 4px;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+}
+
+.helper-seat-1,
+.helper-seat-2,
+.driver-seat {
+  background: #fff;
+}
+
+.passenger-seat {
+  background: #444451;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.passenger-seat:hover {
+  transform: scale(1.2);
+}
+
+.divider-container {
+  width: 100%;
+  margin: 0 auto 10px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.divider {
+  width: 40%;
+  height: 4px;
+  background-color: #495775;
+}
+
+.divider:first-child {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.divider:last-child {
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+}
+
+.passenger-seat-container,
+.seat-pair {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.seat-pair {
+  margin-top: 6px;
+}
+
+.seat-pair:first-child {
+  margin-top: 0;
+}
+
+.passenger-seat.selected {
+  background-color: #6feaf6;
+}
+
+.passenger-seat.occupied {
+  background-color: #fff;
+}
+
+.showcase {
+  background: #495775;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: rgb(165, 165, 165);
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin: auto;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.showcase li small {
+  margin-left: 2px;
+}
+
+.small-seat {
+  background-color: #444451;
+  height: 12px;
+  width: 15px;
+  margin: 3px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.small-seat.selected {
+  background-color: #6feaf6;
+}
+
+.small-seat.occupied {
+  background-color: #fff;
+}
